@@ -35,3 +35,37 @@
 7. **End.**
 
 **Why this works:** Passing `&a` and `&b` gives the function direct access to the original variables via pointers, so changing `*x` and `*y` modifies `a` and `b` in place.
+
+For code 2:-
+Here’s the step-by-step algorithm for your program (swap using **pass-by-value**):
+
+1. **Start.**
+
+2. **Initialize variables in `main`.**
+   Set `a = 5`, `b = 2`.
+
+3. **Call the function with copies.**
+   Execute `swap(a, b)`.
+
+   * Inside the call, parameters receive copies: `x = 5`, `y = 2`.
+
+4. **Inside `swap(int x, int y)`:**
+
+   1. `temp = x` → `temp = 5`.
+   2. `x = y` → `x = 2`.
+   3. `y = temp` → `y = 5`.
+   4. **Return** to `main`. (Only the local copies `x` and `y` changed; `a` and `b` in `main` remain unchanged.)
+
+5. **Back in `main`:**
+
+   * `a` is still `5`.
+   * `b` is still `2`.
+
+6. **Output results.**
+   Print:
+
+   * `value of a is: 5`
+   * `value of b  is: 2`
+
+> Note: In your code, the second `cout` is missing `b`. It should be:
+> `cout << "value of b  is:" << b << endl;`
