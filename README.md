@@ -69,3 +69,32 @@ Here’s the step-by-step algorithm for your program (swap using **pass-by-value
 
 > Note: In your code, the second `cout` is missing `b`. It should be:
 > `cout << "value of b  is:" << b << endl;`
+
+code 3:-
+Here’s the step-by-step algorithm (pass-by-reference increment):
+
+1. **Start.**
+
+2. **Initialize in `main`.**
+   Set `sal = 27000`.
+
+3. **Call function.**
+   Execute `increment(sal)`.
+
+   * Parameter `s` is a **reference** to `sal` (i.e., `s` is another name for `sal`).
+
+4. **Inside `increment(int &s)`:**
+   a) Compute `s = s + 5000` → since `s` references `sal`, `sal` becomes `32000`.
+   b) Print `salary inside function32000`.
+   c) Return to `main`.
+
+5. **Back in `main`:**
+
+   * `sal` is now `32000` (it was modified through the reference).
+
+6. **Output final value.**
+   Print `salary inside main32000`.
+
+7. **End.**
+
+*Note:* The printed text has no space after “function”/“main” because the strings don’t include a trailing space. If you want a space, write `"salary inside function "` and `"salary inside main "`.
