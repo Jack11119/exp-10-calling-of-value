@@ -1,4 +1,4 @@
-
+For code 1:- Here’s the step-by-step algorithm for your program (swap using pass-by-value):
 1. **Start.**
 
 2. **Initialize variables.**
